@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FamilyTreeSueB_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p79-30-fib">
+                                <rect key="frame" x="135" y="423.5" width="192" height="49"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="See my Family">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextViewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hy-MX-Yi8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treeTop" translatesAutoresizingMaskIntoConstraints="NO" id="o0s-AS-mgn">
+                                <rect key="frame" x="20" y="44" width="374" height="400"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p79-30-fib" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2lu-Gl-BrG"/>
+                            <constraint firstItem="o0s-AS-mgn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Atw-3Z-zKu"/>
+                            <constraint firstItem="o0s-AS-mgn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZME-gj-MWe"/>
+                            <constraint firstItem="p79-30-fib" firstAttribute="top" secondItem="o0s-AS-mgn" secondAttribute="bottom" constant="-20.5" id="awm-v6-4Hb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p79-30-fib" secondAttribute="trailing" constant="87" id="g8S-ph-uKA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o0s-AS-mgn" secondAttribute="trailing" constant="20" id="xvq-8s-ZWh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="fXR-SD-51r" kind="showDetail" identifier="SecondViewSegue" id="1lD-ii-IGQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.73913043478262" y="115.84821428571428"/>
+        </scene>
+        <!--BackSegue-->
+        <scene sceneID="Dgw-CF-r8q">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" title="BackSegue" id="fXR-SD-51r" customClass="SecondViewController" customModule="FamilyTreeSueB_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8GV-8e-r0T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph8-Gw-f1G">
+                                <rect key="frame" x="87" y="423.5" width="240" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="See my Family">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextViewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpi-Di-5OD"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treeFamily" translatesAutoresizingMaskIntoConstraints="NO" id="F9Y-iq-tLc">
+                                <rect key="frame" x="20" y="44" width="374" height="400"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F9Y-iq-tLc" firstAttribute="top" secondItem="fQq-ka-1Re" secondAttribute="top" id="2QZ-1G-dU6"/>
+                            <constraint firstItem="F9Y-iq-tLc" firstAttribute="leading" secondItem="fQq-ka-1Re" secondAttribute="leading" constant="20" id="4i7-aW-zCI"/>
+                            <constraint firstItem="fQq-ka-1Re" firstAttribute="trailing" secondItem="F9Y-iq-tLc" secondAttribute="trailing" constant="20" id="Os6-iE-JLe"/>
+                            <constraint firstItem="ph8-Gw-f1G" firstAttribute="centerY" secondItem="8GV-8e-r0T" secondAttribute="centerY" id="XKc-mR-iKG"/>
+                            <constraint firstItem="ph8-Gw-f1G" firstAttribute="top" secondItem="F9Y-iq-tLc" secondAttribute="bottom" constant="-20.5" id="ej5-V2-ZDf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQq-ka-1Re"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4O-8x-GYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="treeFamily" width="1080" height="1080"/>
+        <image name="treeTop" width="1080" height="1080"/>
+    </resources>
+</document>
